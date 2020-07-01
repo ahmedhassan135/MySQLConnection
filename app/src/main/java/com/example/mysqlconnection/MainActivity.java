@@ -23,7 +23,7 @@ import com.android.volley.toolbox.Volley;
 
         final TextView textView = (TextView) findViewById(R.id.text);
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="https://google.com";
+        String url ="http://192.168.18.177";
 
 // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
