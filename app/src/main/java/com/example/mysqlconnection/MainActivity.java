@@ -25,12 +25,10 @@ import com.android.volley.toolbox.Volley;
         RequestQueue queue = Volley.newRequestQueue(this);
         String url ="http://192.168.18.177";
 
-// Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        // Display the first 500 characters of the response string.
                         textView.setText("Response is: "+ response.substring(0,500));
                     }
                 }, new Response.ErrorListener() {
@@ -40,7 +38,6 @@ import com.android.volley.toolbox.Volley;
             }
         });
 
-// Add the request to the RequestQueue.
         queue.add(stringRequest);
 
 
