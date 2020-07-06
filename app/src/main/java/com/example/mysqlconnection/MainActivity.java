@@ -23,13 +23,14 @@ import com.android.volley.toolbox.Volley;
 
         final TextView textView = (TextView) findViewById(R.id.text);
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="http://192.168.18.177";
+        //String url ="http://192.168.18.177";
+        String url ="http://192.168.0.102/php_code.php?t1=ahmed&t2=usernamefield&t3=12345";
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        textView.setText("Response is: "+ response.substring(0,500));
+                        textView.setText("Response is: "+ response);
                     }
                 }, new Response.ErrorListener() {
             @Override
